@@ -23,7 +23,7 @@ def get_text_messages(message):
 @bot.callback_query_handler(func= lambda call: True)
 def answer(call):
     if call.data == 'sad':
-        audio = open(r'https://github.com/decel337/piggy_bot/blob/master/data/voice_26-06-2022_16-46-42.oga', 'rb')
+        audio = open(r'data/voice_26-06-2022_16-46-42.oga', 'rb')
         bot.send_voice(call.message.chat.id, audio)
         audio.close()
         bot.answer_callback_query(callback_query_id=call.id)
